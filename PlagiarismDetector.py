@@ -71,7 +71,7 @@ def find_similar_content(content):
   #-------------------- Generating a search query to retrieve similar content -----------------
   search_query = generate_search_query_for_html(content.contents[0].extract)
   response = metaphor_client.search(
-  search_query,
+  'Code for ' + search_query,
   num_results=10,
   use_autoprompt=True,
   )
